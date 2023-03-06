@@ -35,6 +35,7 @@ const nonTextInputTypes = new Set([
  * shift due to the scrollbars disappearing.
  */
 export function createPreventScroll(options: PreventScrollOptions) {
+  console.log("create prevent scroll");
   createEffect(
     on(
       () => access(options.isDisabled),
@@ -93,6 +94,7 @@ function preventScrollStandard() {
 // 6. As a last resort, handle window scroll events, and scroll back to the top. This can happen when attempting
 //    to navigate to an input with the next/previous buttons that's outside a modal.
 function preventScrollMobileSafari() {
+  console.log("prevent scroll mobile safari");
   let scrollable: Element;
   let lastY = 0;
   const onTouchStart = (e: TouchEvent) => {
