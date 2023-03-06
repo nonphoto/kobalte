@@ -123,7 +123,7 @@ function preventScrollMobileSafari() {
     const bottom = scrollable.scrollHeight - scrollable.clientHeight;
 
     if ((scrollTop <= 0 && y > lastY) || (scrollTop >= bottom && y < lastY)) {
-      e.preventDefault();
+      // e.preventDefault();
     }
 
     lastY = y;
